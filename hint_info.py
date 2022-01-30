@@ -492,7 +492,7 @@ class RecommendAdvice():
                                     f'Вероятность просадки стоимости акций ниже 40%: {str(round(prob_2_drop * 100, 2))}% {add_part} \n' +
                                     f'Текущий уровень прибыльности при торговле в long: {str(buy_now_decision)}%\nТекущая стоимость акции: ~${str(round(current_close, 2))}\n'+
                                     f'По взвешенному мнению экспертов, акция оценивается в ${round(TMP, 2)} ({EXP_G}% к текущей цене); Число экспертов по оценке: {NOA}\n' +
-                                    f'Эффективный период инвестирования с {str(datetime.date(period_1))}, в среднем составляет: {str(effective_shoulder_1)}дн.; c {str(datetime.date(period_2))}: {str(effective_shoulder_2)}дн.')
+                                    f'Эффективный период инвестирования в лонг за последние 2,5 года, в среднем составляет: от {str(effective_shoulder_1)}дн.; за последний год: от {str(effective_shoulder_2)}дн.')
 
             try:
                 chart_1 = risk_analysis_data[1]
