@@ -437,26 +437,21 @@ class RecommendAdvice():
         invest_tactics = ''  # default value
 
         for i in R_full_values:
-            print(f'''i[1] = {i[1]}: {i[1] == ticker}; i[-2] = {i[-2]}: {i[-2] == '1'} ; i[-1] = {i[-1]}: {i[-1] == 'Локомотив'}, {i[-1] == 'Активный рост'}, {i[-1] == 'Потенциал роста'} ''')
             if i[1] == ticker and i[-2] == '1' and i[-1] == 'Локомотив':
                 rankin_rate = '1 - высокий интерес (покупать)'
                 invest_tactics = 'Вектор инвестора: Локомотив'
-                print(f'rankin_rate: {rankin_rate}; invest_tactics: {invest_tactics}')
                 break
             elif i[1] == ticker and i[-2] == '1' and i[-1] == 'Активный рост':
                 rankin_rate = '1 - высокий интерес (покупать)'
                 invest_tactics = 'Вектор инвестора: Активный рост'
-                print(f'rankin_rate: {rankin_rate}; invest_tactics: {invest_tactics}')
                 break
             elif i[1] == ticker and i[-2] == '1' and i[-1] == 'Потенциал роста':
                 rankin_rate = '1 - высокий интерес (покупать)'
                 invest_tactics = 'Вектор инвестора: Потенциал роста'
-                print(f'rankin_rate: {rankin_rate}; invest_tactics: {invest_tactics}')
                 break
             elif i[1] == ticker and i[-2] == '2' and i[-1] == 'Локомотив':
                 rankin_rate = '2 - присутствует интерес (держать)'
                 invest_tactics = 'Вектор инвестора: Локомотив'
-                print(f'rankin_rate: {rankin_rate}; invest_tactics: {invest_tactics}')
                 break
             elif i[1] == ticker and i[-2] == '2' and i[-1] == 'Активный рост':
                 rankin_rate = '2 - присутствует интерес (держать)'
