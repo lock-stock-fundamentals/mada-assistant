@@ -546,7 +546,7 @@ class RecommendAdvice():
 
             rate_info = self.RateInfo(self.req_ticker)
 
-            first_part_fundamental = str(f'Полное наименование: {self.tickers_name_dict.get(self.req_ticker)} ({country}); Сектор: {Sector}\nРыночная капитализация: ${m_cap}млн.\nСтоимость компании: ${enterp_val}млн.\n' +
+            first_part_fundamental = str(f'{self.tickers_name_dict.get(self.req_ticker)} ({country}); Сектор: {Sector}\nРыночная капитализация: ${m_cap}млн.\nСтоимость компании: ${enterp_val}млн.\n' +
                                          f'P/S: {P_S}; P/E: {P_E}; P/B: {P_B}\n' + EBIT + FCF + enterprToRev + enterprToEbitda + DTE + f'Рентабельность активов: {ROA}%\n' + yr_div + five_yr_div_yield)
 
             second_part_technical = str(f'Теоретическая прибыльность при торговле в long, с {str(datetime.date(period_1))}: {str(round(verdict_1 * 10, 1))}%\n' +
